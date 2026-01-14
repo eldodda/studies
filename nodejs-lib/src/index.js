@@ -1,40 +1,15 @@
-// Importando o módulo que trabalha com o sistema de arquivos (nativo do node.js) e armazenando na const 'fs'. 
-const fs = require('fs');
-
-// process.arv é um array com os argumentos da linha de comando (terminal):
-// Índice 0 = Caminho do executável node.
-// Índice 1 = Caminho do script.
-// Índice >=2 = Argumentos fornecidos pelo usuário.
-// Atribuímos o array à variável filePath.
-const filePath = process.argv;
-// Pega o primeiro argumento do usuário (índice 2) e guarda na const link. Se nenhum argumento for passado, link será undefined.
-const link = filePath[2];
-
-
-// Aqui, .readFile() usa como argumento a entrada do usuário em link, 'utf-8' faz que o retorno seja uma string, e a callback (erro, texto).
-// Se erro for TRUTHY: imprime 'Qual é o erro?' e erro.code, que mostra o nome do erro (ex.: ENOENT) e faz o return, para interromper a execução.
-// Se não houver erro, chama a função contaPalavras(texto) para processar o conteúdo.
-fs.readFile(link, 'utf-8', (erro, texto) => {
-    if (erro) {
-        console.log("Qual é o erro?", erro.code);
-        return;
-    }
-    contaPalavras(texto);
-})
-
-
 // Chamamos a função extraiParagrafos(texto) e armazenamos seu retorno na const paragrafos.
 // Pegamos paragrafos e passamos um .flatMap() com uma callback onde:
 // Se paragrafo estiver vazio (!paragrafo), retorna um array vazio.
 // Depois entrega o retorno de verificaPalavrasDuplicadas(paragrafo).
 // O .flatMap() então 'achata' e mapeia o array, eliminando os arrays vazios.
-function contaPalavras(texto) {
+export function contaPalavras(texto) {
     const paragrafos = extraiParagrafos(texto);
     const contagem = paragrafos.flatMap((paragrafo) => {
         if (!paragrafo) return [];
         return verificaPalavrasDuplicadas(paragrafo);
     })
-    console.log(contagem);
+    return contagem;
 }
 
 
