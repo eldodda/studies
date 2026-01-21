@@ -76,11 +76,17 @@ class LivroController {
     }
   }
 
-  static listarLivroPorEditora = async (req, res, next) => {
+  static listarLivroPorFiltro = async (req, res, next) => {
     try {
-      const editora = req.query.editora;
+      //  DESESTRUTURAÇÃO: A const {editora, titulo} pega as informações da query de requisição (parâmetros passados na URL após o "?") e identifica como esses dois parâmetros.
+      const {editora, titulo} = req.query;
 
-      const livrosResultado = await livros.find({ "editora": editora });
+      //  A const 'busca' recebe um objeto vazio, que vai ser preenchido a partir dos 'if's seguintes. Se o parâmetro 'editora' for fornecido na query, o objeto 'busca' vai receber uma chave 'editora' com o valor fornecido pela query, então a busca será feita. A mesma coisa se o parâmetro fornecid for 'titulo'.
+      const busca = {};
+      if (editora) busca.editora = editora;
+      if (titulo) busca.titulo = titulo
+
+      const livrosResultado = await livros.find(busca);
 
       res.status(200).send(livrosResultado);
     } catch (erro) {
@@ -92,4 +98,4 @@ class LivroController {
 
 }
 
-export default LivroController
+export default LivroController;
