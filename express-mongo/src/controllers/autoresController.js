@@ -1,14 +1,14 @@
 import NaoEncontrado from "../erros/NaoEncontrado.js";
-import {autores} from "../models/index.js";
+import { autores } from "../models/index.js";
 
 class AutorController {
 
-  static listarAutores = async (req, res) => {
+  static listarAutores = async (req, res, next) => {
     try {
-      const autoresResultado = await autores.find();
+      const buscaAutores = autores.find();
 
-      res.status(200).json(autoresResultado);
-
+      req.resultado = buscaAutores;
+      next();
     } catch (erro) {
       res.status(500).json({ message: "Erro interno no servidor." });
     }
@@ -47,7 +47,7 @@ class AutorController {
     try {
       const id = req.params.id;
 
-      const autorResultado = await autores.findByIdAndUpdate(id, {$set: req.body});
+      const autorResultado = await autores.findByIdAndUpdate(id, { $set: req.body });
       if (autorResultado !== null) {
         res.status(200).send({ message: "Autor atualizado com sucesso." });
 
@@ -65,8 +65,8 @@ class AutorController {
       const id = req.params.id;
 
       const autorResultado = await autores.findByIdAndDelete(id);
-      if (autorResultado !== null){
-      res.status(200).send({ message: "Autor removido com sucesso." });
+      if (autorResultado !== null) {
+        res.status(200).send({ message: "Autor removido com sucesso." });
       } else {
         next(new NaoEncontrado("Id do autor não localizado."));
       }
