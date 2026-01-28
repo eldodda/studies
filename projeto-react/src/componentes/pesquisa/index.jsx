@@ -1,7 +1,7 @@
 import Input from "../input"
 import styled from "styled-components"
 import { useState } from "react"
-import { livros } from './dadosPesquisa.jsx'
+import { jogos } from './dadosPesquisa.jsx'
 
 const PesquisaCont = styled.search`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -43,7 +43,7 @@ const Resultado = styled.div`
 `
 
 function Pesquisa() {
-    const [livrosPesquisados, setLivrosPesquisados] = useState([])
+    const [jogosPesquisados, setjogosPesquisados] = useState([])
 
     return (
         <PesquisaCont>
@@ -53,14 +53,14 @@ function Pesquisa() {
                 placeholder="Vamos de que hoje?"
                 onBlur={evento => {
                     const textoDigitado = evento.target.value
-                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
-                    setLivrosPesquisados(resultadoPesquisa)
+                    const resultadoPesquisa = jogos.filter(jogo => jogo.nome.includes(textoDigitado))
+                    setjogosPesquisados(resultadoPesquisa)
                 }}
             />
-            {livrosPesquisados.map(livro => (
+            {jogosPesquisados.map(jogo => (
                 <Resultado>
-                   <img src={livro.src}/>
-                   <p>{livro.nome}</p>
+                   <img src={jogo.src}/>
+                   <p>{jogo.nome}</p>
                </Resultado>
             ))}
         </PesquisaCont>

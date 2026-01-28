@@ -1,8 +1,9 @@
-import livro from '../../assets/_imgs/livro.png'
+import alttp from '../../assets/_imgs/alttp.png'
+import smk from '../../assets/_imgs/smk.png'
+import yi from '../../assets/_imgs/yi.png'
 
-export const livros = [
-    { nome: 'Liderança em Design', id: 1, src: livro },
-    { nome: 'JavaScript Assertivo', id: 2, src: livro },
-    { nome: 'Cangaceiro em JavaScript', id: 3, src: livro },
-    { nome: 'Aventureiros do Java', id: 4, src: livro }
+export const jogos = [
+    { nome: 'The Legend of Zelda - A Link to the Past', id: 1, src: alttp },
+    { nome: 'Super Mario Kart', id: 2, src: smk },
+    { nome: "Yoshi's Island", id: 3, src: yi }
 ]

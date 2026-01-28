@@ -1,4 +1,4 @@
-import logo from '../../assets/_imgs/logo.svg'
+import logo from '../../assets/_imgs/logo.png'
 import styled from 'styled-components'
 
 const LogoStyle = styled.div`
@@ -8,12 +8,14 @@ const LogoStyle = styled.div`
 `
 const LogoImg = styled.img`
     margin-right: 10px;
+    height: 80px;
+    margin-top: 10px;
 `
 
 function Logo() {
     return (
         <LogoStyle>
-            <LogoImg 
+            <LogoImg
                 src={logo}
                 alt='Logo'
             />
