@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nome": "The Legend of Zelda - A Link to the Past",
+        "dist": "Nintendo",
+        "ano": 1991
+    },
+    {
+        "id": 2,
+        "nome": "Super Mario Kart",
+        "dist": "Nintendo",
+        "ano": 1992
+    },
+    {
+        "id": 3,
+        "nome": "Chrono Trigger",
+        "dist": "Square",
+        "ano": 1995
+    },
+    {
+        "id": 4,
+        "nome": "Yoshi's, Island",
+        "dist": "Nintendo",
+        "ano": 1995
+    },
+    {
+        "id": 5,
+        "nome": "Castlevania - Dracula X",
+        "dist": "Konami",
+        "ano": 1995
+    }
+]
