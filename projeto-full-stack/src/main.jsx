@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createGlobalStyle } from 'styled-components'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -79,7 +80,14 @@ const GlobalStyle = createGlobalStyle`
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <GlobalStyle/>
-    <App />
-  </StrictMode>,
+    <GlobalStyle />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/favoritos' element={<p>FAV!</p>} />
+        <Route path='/categorias' element={<p>CAT!</p>} />
+        <Route path='/estante' element={<p>EST!</p>} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>
 )
