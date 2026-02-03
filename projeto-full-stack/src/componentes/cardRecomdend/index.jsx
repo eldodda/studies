@@ -3,7 +3,7 @@ import { Titulo } from "../titulo"
 
 const Card = styled.div`
     align-items: center;
-    background-color: #FFF;
+    background-color: blanchedalmond;
     border-radius: 10px;
     display: flex;
     margin: 40px auto;
@@ -49,7 +49,7 @@ const Botao = styled.button`
     }
 `
 
-const ImgLivro = styled.img`
+const ImgJogo = styled.img`
     width: 150px;
     border-radius: 5px;
 `
@@ -63,7 +63,7 @@ function CardRecomenda({ titulo, subtitulo, descricao, img }) {
                 <Descricao>{descricao}</Descricao>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <ImgLivro src={img}/>
+                <ImgJogo src={img}/>
                 <Botao>Saiba mais</Botao>
             </div>
         </Card>

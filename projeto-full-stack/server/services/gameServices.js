@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function listAll(res) {
-    return res.send(JSON.parse(fs.readFileSync('games.json')));
+    return JSON.parse(fs.readFileSync('games.json'));
 }
 
 function findById(id) {

@@ -1,8 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import Home from './rotas/Home.jsx'
 import { createGlobalStyle } from 'styled-components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './componentes/header/index.jsx'
+import Favoritos from './rotas/Favoritos.jsx'
+import Categorias from './rotas/Categorias.jsx'
+import Estante from './rotas/Estante.jsx'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -82,11 +86,12 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GlobalStyle />
     <BrowserRouter>
+      <Header />
       <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/favoritos' element={<p>FAV!</p>} />
-        <Route path='/categorias' element={<p>CAT!</p>} />
-        <Route path='/estante' element={<p>EST!</p>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/favoritos' element={<Favoritos/>} />
+        <Route path='/categorias' element={<Categorias/>} />
+        <Route path='/estante' element={<Estante/>} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

@@ -1,1 +1,79 @@
-[{"id":1,"nome":"The Legend of Zelda - A Link to the Past","dist":"Nintendo","ano":1991},{"id":2,"nome":"Super Mario Kart","dist":"Nintendo","ano":1992},{"id":3,"nome":"Chrono Trigger","dist":"Square","ano":1995},{"id":4,"nome":"Yoshi's, Island","dist":"Nintendo","ano":1995},{"id":5,"nome":"Castlevania - Dracula X","dist":"Konami","ano":1995},{"id":6,"nome":"E.V.O. - Search for Eden","dist":"Enix","ano":1993},{"id":7,"nome":"Fatal Fury 2","dist":"SNK","ano":1992},{"id":10,"dist":"Atari","ano":1983}]
+[
+    {
+        "id": 1,
+        "nome": "The Legend of Zelda - A Link to the Past",
+        "dist": "Nintendo",
+        "ano": 1991,
+        "src": "../src/assets/_imgs/alttp.png"
+    },
+    {
+        "id": 2,
+        "nome": "Super Mario Kart",
+        "dist": "Nintendo",
+        "ano": 1992,
+        "src": "../src/assets/_imgs/smk.png"
+    },
+    {
+        "id": 3,
+        "nome": "Chrono Trigger",
+        "dist": "Square",
+        "ano": 1995,
+        "src": "../src/assets/_imgs/ct.png"
+    },
+    {
+        "id": 4,
+        "nome": "Yoshi's, Island",
+        "dist": "Nintendo",
+        "ano": 1995,
+        "src": "../src/assets/_imgs/yi.png"
+    },
+    {
+        "id": 5,
+        "nome": "Castlevania - Dracula X",
+        "dist": "Konami",
+        "ano": 1995,
+        "src": "../src/assets/_imgs/dx.png"
+    },
+    {
+        "id": 6,
+        "nome": "E.V.O. - Search for Eden",
+        "dist": "Enix",
+        "ano": 1993,
+        "src": "../src/assets/_imgs/evo.png"
+    },
+    {
+        "id": 7,
+        "nome": "Fatal Fury 2",
+        "dist": "SNK",
+        "ano": 1992,
+        "src": "../src/assets/_imgs/ff2.png"
+    },
+    {
+        "id": 8,
+        "nome": "Shadowrun",
+        "dist": "Dataeast USA",
+        "ano": 1993,
+        "src": "../src/assets/_imgs/sr.png"
+    },
+    {
+        "id": 9,
+        "nome": "Flashback",
+        "dist": "Delphine Software",
+        "ano": 1993,
+        "src": "../src/assets/_imgs/fb.png"
+    },
+    {
+        "id": 10,
+        "nome": "Final Fantasy III",
+        "dist": "Square",
+        "ano": 1994,
+        "src": "../src/assets/_imgs/ff3.png"
+    },
+    {
+        "id": 11,
+        "nome": "The Firemen",
+        "dist": "Human Corporation",
+        "ano": 1994,
+        "src": "../src/assets/_imgs/tf.png"
+    }
+]

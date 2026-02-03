@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nome": "The Legend of Zelda - A Link to the Past",
+        "dist": "Nintendo",
+        "ano": 1991,
+        "src": "../src/assets/_imgs/alttp.png"
+    },
+    {
+        "id": 2,
+        "nome": "Super Mario Kart",
+        "dist": "Nintendo",
+        "ano": 1992,
+        "src": "../src/assets/_imgs/smk.png"
+    },
+    {
+        "id": 5,
+        "nome": "Castlevania - Dracula X",
+        "dist": "Konami",
+        "ano": 1995,
+        "src": "../src/assets/_imgs/dx.png"
+    }
+]

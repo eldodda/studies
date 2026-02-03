@@ -12,12 +12,37 @@ const UltimosLancamentosContainer = styled.section`
     align-items: center;
 `
 
-const NovosLivrosContainer = styled.div`
-    margin-top: 30px;
+const VitrineJogos = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+`
+
+const ItemJogo = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
+    
+    img {
+        width: 200px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    p {
+        color: blanchedalmond;
+        font-weight: bold;
+        margin-top: 15px;
+        text-align: center;
+    }
 `
 
 function UltimosLancamentos() {
@@ -26,11 +51,16 @@ function UltimosLancamentos() {
             <Titulo
                 tamanhoFonte="36px"
             >Últimos lançamentos </Titulo>
-            {jogos.map(jogo => (
-                <NovosLivrosContainer>
-                    <img src={jogo.src} />
-                    <p>{jogo.nome}</p>
-                </NovosLivrosContainer>))}
+
+            <VitrineJogos>
+                {jogos.map(jogo => (
+                    <ItemJogo>
+                        <img src={jogo.src} />
+                        <p>{jogo.nome}</p>
+                    </ItemJogo>
+                    ))}
+            </VitrineJogos>
+
             <CardRecomenda
                 titulo="Talvez você também curta:"
                 subtitulo="Chrono Trigger"
