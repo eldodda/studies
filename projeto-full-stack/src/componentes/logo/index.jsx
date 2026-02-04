@@ -19,7 +19,7 @@ function Logo() {
                 src={logo}
                 alt='Logo'
             />
-            <p><strong>Dogon</strong> Games</p>
+            <p><strong>Dogon</strong> Gamezine</p>
         </LogoStyle>
     )
 }

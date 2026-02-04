@@ -2,6 +2,7 @@ import Input from "../input"
 import styled from "styled-components"
 import { useEffect, useState } from "react"
 import { getGames } from "../../servicos/jogos.js"
+import { postFavos } from "../../servicos/favoritos.js"
 
 const PesquisaCont = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -65,6 +66,11 @@ function Pesquisa() {
         setGames(gamesFromAPI)
     }
 
+    async function insertFavo(id) {
+        await postFavos(id);
+        alert(`Jogo de id: ${id} favoritado!`);
+    }
+
     return (
         <PesquisaCont>
             <Titulo>Já sabe por onde começar?</Titulo>
@@ -81,7 +87,7 @@ function Pesquisa() {
                 }}
             />
             {jogosPesquisados.map(jogo => (
-                <Resultado>
+                <Resultado onClick={() => insertFavo(jogo.id)}>
                     <img src={jogo.src} />
                     <p>{jogo.nome}</p>
                 </Resultado>

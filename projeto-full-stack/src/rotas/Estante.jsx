@@ -4,7 +4,7 @@ import Pesquisa from '../componentes/pesquisa'
 const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(90deg, #000f26 35%, #183143 165%);
+  background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
 `
 
 function Estante() {
