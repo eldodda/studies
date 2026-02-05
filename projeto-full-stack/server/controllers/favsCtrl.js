@@ -13,10 +13,13 @@ function listFavorites(req, res) {
 function addNewFav(req, res) {
     try {
         const id = req.params.id;
-        newFav(id);
-        res.status(201);
+        const resultado = newFav(id);
+        console.log("Sucesso no serviço:", resultado);
+        res.status(resultado.status)
+            .json(resultado);
     } catch (erro) {
-        res.status(404).send(erro.message);
+        console.error("Erro no controller:", erro.message);
+        res.status(500).json({ message: erro.message });
     }
 }
 

@@ -1,44 +1,23 @@
 [
-  {
-    "id": 1,
-    "nome": "The Legend of Zelda - A Link to the Past",
-    "dist": "Nintendo",
-    "ano": 1991,
-    "src": "../src/assets/_imgs/alttp.png"
-  },
-  {
-    "id": 2,
-    "nome": "Super Mario Kart",
-    "dist": "Nintendo",
-    "ano": 1992,
-    "src": "../src/assets/_imgs/smk.png"
-  },
-  {
-    "id": 5,
-    "nome": "Castlevania - Dracula X",
-    "dist": "Konami",
-    "ano": 1995,
-    "src": "../src/assets/_imgs/dx.png"
-  },
-  {
-    "id": 6,
-    "nome": "E.V.O. - Search for Eden",
-    "dist": "Enix",
-    "ano": 1993,
-    "src": "../src/assets/_imgs/evo.png"
-  },
-  {
-    "id": 8,
-    "nome": "Shadowrun",
-    "dist": "Dataeast USA",
-    "ano": 1993,
-    "src": "../src/assets/_imgs/sr.png"
-  },
-  {
-    "id": 11,
-    "nome": "The Firemen",
-    "dist": "Human Corporation",
-    "ano": 1994,
-    "src": "../src/assets/_imgs/tf.png"
-  }
+   {
+      "id": 1,
+      "nome": "The Legend of Zelda - A Link to the Past",
+      "dist": "Nintendo",
+      "ano": 1991,
+      "src": "../src/assets/_imgs/alttp.png"
+   },
+   {
+      "id": 5,
+      "nome": "Castlevania - Dracula X",
+      "dist": "Konami",
+      "ano": 1995,
+      "src": "../src/assets/_imgs/dx.png"
+   },
+   {
+      "id": 10,
+      "nome": "Final Fantasy III",
+      "dist": "Square",
+      "ano": 1994,
+      "src": "../src/assets/_imgs/ff3.png"
+   }
 ]

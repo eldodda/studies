@@ -65,11 +65,15 @@ function Pesquisa() {
         const gamesFromAPI = await getGames()
         setGames(gamesFromAPI)
     }
-
-    async function insertFavo(id) {
-        await postFavos(id);
-        alert(`Jogo de id: ${id} favoritado!`);
+async function insertFavo(id) {
+    try {
+        const resposta = await postFavos(id);
+        alert(resposta.message); 
+    } catch (error) {
+        const msgErro = error.response.data.message;
+        alert(msgErro);
     }
+}
 
     return (
         <PesquisaCont>

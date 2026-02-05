@@ -8,7 +8,8 @@ async function getFavos(){
 }
 
 async function postFavos(id) {
-    await favsFromAPI.post(`/${id}`);
+    const response = await favsFromAPI.post(`/${id}`);
+    return response.data;
 }
 
 async function deleteFavos(id){
