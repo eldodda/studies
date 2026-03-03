@@ -90,6 +90,16 @@ class AluguelLivroService {
       throw new Error(err.message);
     }
   }
+
+  async calcularDataDevolucao(rentDate, daysRented) {
+    if (daysRented < 1) {
+      throw new Error('Número de dias alugados não pode ser menor que 1.')
+    }
+    const returnDate = new Date(rentDate.setDate(rentDate.getDate()));
+    returnDate.setDate(returnDate.getDate() + daysRented);
+
+    return returnDate;
+  }
 }
 
 export default AluguelLivroService;
